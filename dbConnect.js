@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-const uri =
-    "mongodb+srv://Prathamesh:pstj9wjOXZjXXBTy@cluster0.kozffvs.mongodb.net/?retryWrites=true&w=majority";
+const dotenv = require("dotenv");
+dotenv.config({ path: "./.env" });
+const uri = process.env.URI;
 module.exports = () => {
     try {
         mongoose.connect(
